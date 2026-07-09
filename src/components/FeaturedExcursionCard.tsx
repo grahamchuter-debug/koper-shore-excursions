@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ResponsiveImage } from "@/components/ResponsiveImage";
 import type { ExcursionPage } from "@/data/types";
 import { getExcursionImage } from "@/lib/images";
 import { EditorialBadges } from "@/components/EditorialBadge";
@@ -20,12 +21,11 @@ export function FeaturedExcursionCard({
       className={`card-editorial group scroll-mt-28 overflow-hidden ${isEditorsChoice ? "ring-2 ring-maple-400/40" : ""}`}
     >
       <div className="relative aspect-[16/9] overflow-hidden">
-        <img
-          src={image.src}
-          alt={image.alt}
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-          loading="lazy"
-        />
+        <ResponsiveImage
+                    image={image}
+                    role="card"
+                    imgClassName="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
         <div className="absolute inset-0 bg-gradient-to-t from-coastal-900/60 via-transparent to-transparent" aria-hidden="true" />
         <span className="absolute left-3 top-3 pill bg-white/90">{excursion.category}</span>
         {excursion.badges && excursion.badges.length > 0 && (

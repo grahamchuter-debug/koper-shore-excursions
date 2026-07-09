@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ResponsiveImage } from "@/components/ResponsiveImage";
 import { experiencePaths } from "@/data/homepage";
 import { getExperiencePathImage } from "@/lib/images";
 
@@ -22,11 +23,10 @@ export function ExperiencePathSelector() {
                 className={`card-editorial group flex h-full flex-col overflow-hidden ${isEditorsChoice ? "ring-2 ring-maple-400/50" : ""}`}
               >
                 <div className="relative aspect-[16/10] overflow-hidden">
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    loading="lazy"
+                  <ResponsiveImage
+                    image={image}
+                    role="card"
+                    imgClassName="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-coastal-900/70 via-coastal-900/20 to-transparent" aria-hidden="true" />
                   {isEditorsChoice && (

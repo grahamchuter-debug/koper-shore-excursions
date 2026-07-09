@@ -50,7 +50,7 @@ export function KoperCruisePlannerSection() {
       <div className="section-padding relative z-10 text-white">
         <div className="container-wide">
           <div className="mx-auto max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-wider text-coastal-300">Your Slovenia day — coming soon</p>
+            <p className="text-sm font-semibold uppercase tracking-wider text-coastal-300">Your Slovenia day — planner in development</p>
             <h2 className="mt-3 font-display text-3xl font-semibold sm:text-4xl lg:text-5xl">
               Tell us your ship.<br className="hidden sm:block" /> We&apos;ll suggest the right Slovenia.
             </h2>
@@ -134,7 +134,7 @@ export function KoperCruisePlannerSection() {
               <div className="mt-6 rounded-xl border border-maple-400/30 bg-maple-500/10 p-5">
                 <p className="font-semibold text-maple-200">Got it — we&apos;ve noted your details.</p>
                 <p className="mt-2 text-sm text-white/80">
-                  Full smart recommendations are coming soon. Right now, use our{" "}
+                  Full smart recommendations are in development. Right now, use our{" "}
                   <Link href="/#which-day" className="font-medium text-maple-300 underline hover:text-maple-200">decision guide</Link>{" "}
                   or{" "}
                   <Link href="/day-trips" className="font-medium text-maple-300 underline hover:text-maple-200">read our day guides</Link>{" "}

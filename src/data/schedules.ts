@@ -7,8 +7,7 @@ export const schedulePorts: ShipSchedulePort[] = [
     country: "Slovenia",
     description: "Slovenia's only cruise port on the Adriatic",
     seoTitle: "Koper Cruise Ship Schedule",
-    metaDescription:
-      "Koper cruise ship schedule hub. See which ships are in port and plan Slovenia days — Old Town, Piran, Lake Bled and Adriatic excursions around arrival and departure times.",
+    metaDescription: "Koper cruise ship schedule hub. See which ships are in port and plan Slovenia days — Old Town, Piran, Lake Bled and Adriatic excursions around arrival and…",
     intro:
       "Koper is Slovenia's only cruise port — gateway to Venetian old towns, Adriatic harbours, Alpine lakes and limestone caves. Check which vessels are scheduled before planning your day ashore.",
     scheduleOverview:

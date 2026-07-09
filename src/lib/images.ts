@@ -1,9 +1,14 @@
 export interface SiteImage {
   src: string;
   alt: string;
+  base: string;
 }
 
 const B = "/images";
+
+function img(base: string, alt: string): SiteImage {
+  return { base, src: `${B}/${base}.jpg`, alt };
+}
 
 export const siteImages = {
   hero: {

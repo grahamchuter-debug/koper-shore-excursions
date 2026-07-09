@@ -231,8 +231,7 @@ export const guides: GuidePage[] = [
     path: "/best-days-from-koper",
     title: "Our Favourite Days from Koper",
     seoTitle: "Best Days in Slovenia from Koper — Editorial Recommendations",
-    metaDescription:
-      "Our editorial team's favourite days from Koper cruise port — Old Town walks, Piran, Lake Bled, Postojna and Istria with honest guidance for different passengers.",
+    metaDescription: "Our editorial team's favourite days from Koper cruise port — Old Town walks, Piran, Lake Bled, Postojna and Istria with honest guidance for different…",
     eyebrow: "Editorial picks",
     tagline:
       "Curated recommendations with editorial judgement — honest picks for different passengers and port windows.",
