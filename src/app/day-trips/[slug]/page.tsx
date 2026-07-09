@@ -1,0 +1,151 @@
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { excursionPageMetadata } from "@/lib/seo";
+import { PhotoHeroBand } from "@/components/PhotoHeroBand";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { FAQSection } from "@/components/FAQSection";
+import { PlanningLinks } from "@/components/PlanningLinks";
+import { CruiseSnapshotCard, EnquiryCTA } from "@/components/ConversionBlocks";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbSchema, faqSchema, articleSchema } from "@/lib/schema";
+import { getExcursionBySlug, getAllExcursionSlugs, excursions } from "@/data/excursions";
+import { getGuideBySlug } from "@/data/guides";
+import { EditorialBadges } from "@/components/EditorialBadge";
+import { getExcursionImage } from "@/lib/images";
+
+export function generateStaticParams() {
+  return getAllExcursionSlugs().map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const e = getExcursionBySlug(slug);
+  if (!e) return {};
+  return excursionPageMetadata(slug, e.seoTitle, e.metaDescription);
+}
+
+export default async function DayTripDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const e = getExcursionBySlug(slug);
+  if (!e) notFound();
+  const image = getExcursionImage(slug);
+  const related = e.relatedExcursionSlugs.map((s) => excursions.find((x) => x.slug === s)).filter(Boolean);
+  const relatedGuide = e.relatedGuideSlug ? getGuideBySlug(e.relatedGuideSlug) : undefined;
+
+  const breadcrumbs = [
+    { name: "Home", path: "/" },
+    { name: "Day Trips", path: "/day-trips" },
+    { name: e.title, path: `/day-trips/${slug}` },
+  ];
+
+  return (
+    <>
+      <JsonLd
+        data={[
+          breadcrumbSchema(breadcrumbs),
+          faqSchema(e.faqs),
+          articleSchema({ title: e.seoTitle, description: e.metaDescription, path: `/day-trips/${slug}`, image: image.src }),
+        ]}
+      />
+      <PhotoHeroBand image={image} eyebrow={e.category} title={e.title} subtitle={e.tagline} compact />
+
+      <section className="section-padding">
+        <div className="container-wide max-w-4xl">
+          <Breadcrumbs items={breadcrumbs} />
+
+          {e.badges && e.badges.length > 0 && (
+            <div className="mb-6">
+              <EditorialBadges badges={e.badges} />
+            </div>
+          )}
+
+          {e.editorialNote && (
+            <p className="mb-6 rounded-xl border border-maple-200/60 bg-maple-50/50 px-5 py-4 text-base italic leading-relaxed text-coastal-900">
+              {e.editorialNote}
+            </p>
+          )}
+
+          <CruiseSnapshotCard snapshot={e.snapshot} />
+
+          <p className="text-lg leading-relaxed text-gray-700">{e.overview}</p>
+
+          <div className="prose-body">
+            {e.body.map((p, i) => <p key={i}>{p}</p>)}
+          </div>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            <div className="card-feature">
+              <h2 className="font-display text-xl font-bold text-gray-900">Highlights</h2>
+              <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-gray-700">
+                {e.highlights.map((h) => <li key={h}>{h}</li>)}
+              </ul>
+            </div>
+            <div className="card-feature">
+              <h2 className="font-display text-xl font-bold text-gray-900">What a good day includes</h2>
+              <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-gray-700">
+                {e.included.map((h) => <li key={h}>{h}</li>)}
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-8 card-accent">
+            <h2 className="font-display text-xl font-bold text-gray-900">Getting there from the cruise port</h2>
+            <p className="mt-3 text-gray-700">{e.portLogistics}</p>
+          </div>
+
+          <div className="mt-8">
+            <h2 className="section-title text-2xl mb-4">Tips for cruise passengers</h2>
+            <ul className="list-disc space-y-2 pl-5 text-gray-700">
+              {e.tips.map((t) => <li key={t}>{t}</li>)}
+            </ul>
+          </div>
+
+          {relatedGuide && (
+            <div className="mt-10 card-feature flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wide text-coastal-600">Planning guide</p>
+                <h2 className="mt-1 font-display text-xl font-bold text-gray-900">{relatedGuide.title}</h2>
+                <p className="mt-1 text-sm text-gray-600">{relatedGuide.tagline}</p>
+              </div>
+              <Link href={relatedGuide.path} className="btn-secondary shrink-0">Read guide</Link>
+            </div>
+          )}
+
+          <div className="mt-10 flex flex-wrap gap-3">
+            <Link href="/koper-old-town-vs-day-trips" className="btn-primary">Read our decision guide</Link>
+            <Link href="/enquire" className="btn-secondary">Ask the editor about this day</Link>
+          </div>
+
+          {related.length > 0 && (
+            <div className="mt-12">
+              <h2 className="section-title text-2xl mb-6">Other days worth considering</h2>
+              <div className="grid gap-6 sm:grid-cols-3">
+                {related.map((r) => r && (
+                  <Link key={r.slug} href={`/day-trips/${r.slug}`} className="card-editorial group overflow-hidden">
+                    <div className="relative aspect-[16/9] overflow-hidden">
+                      <img src={getExcursionImage(r.slug).src} alt={getExcursionImage(r.slug).alt} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                    </div>
+                    <div className="p-5">
+                      <h3 className="font-display text-base font-bold text-gray-900 group-hover:text-coastal-800">{r.title}</h3>
+                      <p className="mt-1 text-sm text-gray-600">{r.tagline}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <EnquiryCTA />
+
+          <div className="mt-12">
+            <FAQSection faqs={e.faqs} title={`${e.title} — FAQs`} />
+          </div>
+
+          <div className="mt-12">
+            <PlanningLinks />
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
