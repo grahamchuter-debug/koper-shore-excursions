@@ -1,5 +1,5 @@
 {
-  "name": "slovenia-from-koper",
+  "name": "koper-shore-excursions",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,7 +11,7 @@
     "download-images": "node scripts/download-images.mjs",
     "seo-qa": "node scripts/seo-qa.mjs",
     "deploy": "npm run build && wrangler deploy",
-    "pages:deploy": "npm run build && wrangler pages deploy out --project-name=slovenia-from-koper"
+    "pages:deploy": "npm run build && wrangler pages deploy out --project-name=koper-shore-excursions"
   },
   "engines": {
     "node": ">=20"
