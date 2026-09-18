@@ -1,3 +1,4 @@
+import koperSchedule from "./imported-schedules/koper.json";
 import type { ScheduleEntry, ShipSchedulePort } from "./types";
 
 export const schedulePorts: ShipSchedulePort[] = [
@@ -27,7 +28,7 @@ export const schedulePorts: ShipSchedulePort[] = [
 ];
 
 export const schedules: Record<string, ScheduleEntry[]> = {
-  koper: [],
+  koper: koperSchedule as ScheduleEntry[],
 };
 
 export function getScheduleEntries(slug: string): ScheduleEntry[] {

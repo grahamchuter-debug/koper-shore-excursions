@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-09-18T07:43:29.241Z",
+  "wave": "wave-1d",
+  "port": "koper",
+  "destSlug": "koper",
+  "displayName": "Koper",
+  "counts": {
+    "2026": 20,
+    "2027": 61,
+    "2028_discovery": 32,
+    "2028_published": 0,
+    "public_total": 81,
+    "h1_2026": 0
+  },
+  "partial2026": true,
+  "filter2028": {
+    "decision": "HOLD",
+    "reason": "validated 5 < MIN_PUBLISH_ROWS 15 — HOLD; restricted rows NOT reintroduced",
+    "validatedCount": 5,
+    "tier2PrincessKeys": 0
+  },
+  "timeCompleteness": {
+    "2026": {
+      "total": 20,
+      "arrival": 17,
+      "departure": 17,
+      "both": 17,
+      "neither": 3,
+      "pctBoth": 85
+    },
+    "2027": {
+      "total": 61,
+      "arrival": 43,
+      "departure": 42,
+      "both": 42,
+      "neither": 18,
+      "pctBoth": 68.9
+    },
+    "2028": {
+      "total": 0,
+      "arrival": 0,
+      "departure": 0,
+      "both": 0,
+      "neither": 0,
+      "pctBoth": 0
+    }
+  },
+  "contaminationPurged": [
+    "src/data/imported-schedules/izmir.json"
+  ],
+  "wireSchedulesTs": {
+    "wired": true,
+    "reason": "import wired"
+  }
+}

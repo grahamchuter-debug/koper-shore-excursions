@@ -6,82 +6,31 @@ export interface SiteImage {
 
 const B = "/images";
 
-function img(base: string, alt: string): SiteImage {
-  return { base, src: `${B}/${base}.jpg`, alt };
+function img(base: string, alt: string, ext = "jpg"): SiteImage {
+  return { base, src: `${B}/${base}.${ext}`, alt };
 }
 
 export const siteImages = {
-  hero: {
-    src: `${B}/hero-home.jpg`,
-    alt: "Emerald Lake Bled with island church and Julian Alps, Slovenia",
-  },
-  ogDefault: {
-    src: `${B}/og-default.jpg`,
-    alt: "Praetorian Palace at sunrise in Koper Old Town, Slovenia",
-  },
-  logo: {
-    src: `${B}/logo-mark.svg`,
-    alt: "Slovenia from Koper",
-  },
-  port: {
-    src: `${B}/cruise-port.jpg`,
-    alt: "Cruise ship approaching the Port of Koper at dawn, Slovenia",
-  },
-} as const;
+  hero: img("hero-home", "Emerald Lake Bled with island church and Julian Alps, Slovenia"),
+  ogDefault: img("og-default", "Praetorian Palace at sunrise in Koper Old Town, Slovenia"),
+  logo: img("logo-mark", "Slovenia from Koper", "svg"),
+  port: img("cruise-port", "Cruise ship approaching the Port of Koper at dawn, Slovenia"),
+} as const satisfies Record<string, SiteImage>;
 
 export const subjectImages: Record<string, SiteImage> = {
-  koper: {
-    src: `${B}/koper.jpg`,
-    alt: "Praetorian Palace on Tito Square in Koper Old Town, Slovenia",
-  },
-  "old-town": {
-    src: `${B}/old-town.jpg`,
-    alt: "Terracotta rooftops and Venetian lanes in Koper Old Town",
-  },
-  piran: {
-    src: `${B}/piran.jpg`,
-    alt: "Tartini Square and harbour in Piran, Slovenia",
-  },
-  "lake-bled": {
-    src: `${B}/lake-bled.jpg`,
-    alt: "Turquoise Lake Bled with island church and Julian Alps, Slovenia",
-  },
-  postojna: {
-    src: `${B}/postojna.jpg`,
-    alt: "Stalactite chambers inside Postojna Cave, Slovenia",
-  },
-  predjama: {
-    src: `${B}/predjama.jpg`,
-    alt: "Predjama Castle built into a cliff face near Postojna, Slovenia",
-  },
-  istria: {
-    src: `${B}/istria.jpg`,
-    alt: "Vineyards and hill town views in Slovenian Istria",
-  },
-  harbour: {
-    src: `${B}/harbour.jpg`,
-    alt: "Piran harbour viewed from St George's Church, Slovenia",
-  },
-  relaxed: {
-    src: `${B}/relaxed.jpg`,
-    alt: "Praetorian Palace at sunrise in Koper — a gentle morning ashore",
-  },
-  planner: {
-    src: `${B}/planner.jpg`,
-    alt: "Cruise ship at Koper terminal — planning your Slovenia day",
-  },
-  highlights: {
-    src: `${B}/highlights.jpg`,
-    alt: "Bled Castle above Lake Bled with the Julian Alps, Slovenia",
-  },
-  "port-day": {
-    src: `${B}/port-day.jpg`,
-    alt: "Koper Old Town streets — planning your day by ship schedule",
-  },
-  comparison: {
-    src: `${B}/comparison.jpg`,
-    alt: "Piran harbour from above — comparing Slovenia's coastal days",
-  },
+  koper: img("koper", "Praetorian Palace on Tito Square in Koper Old Town, Slovenia"),
+  "old-town": img("old-town", "Terracotta rooftops and Venetian lanes in Koper Old Town"),
+  piran: img("piran", "Tartini Square and harbour in Piran, Slovenia"),
+  "lake-bled": img("lake-bled", "Turquoise Lake Bled with island church and Julian Alps, Slovenia"),
+  postojna: img("postojna", "Stalactite chambers inside Postojna Cave, Slovenia"),
+  predjama: img("predjama", "Predjama Castle built into a cliff face near Postojna, Slovenia"),
+  istria: img("istria", "Vineyards and hill town views in Slovenian Istria"),
+  harbour: img("harbour", "Piran harbour viewed from St George's Church, Slovenia"),
+  relaxed: img("relaxed", "Praetorian Palace at sunrise in Koper — a gentle morning ashore"),
+  planner: img("planner", "Cruise ship at Koper terminal — planning your Slovenia day"),
+  highlights: img("highlights", "Bled Castle above Lake Bled with the Julian Alps, Slovenia"),
+  "port-day": img("port-day", "Koper Old Town streets — planning your day by ship schedule"),
+  comparison: img("comparison", "Piran harbour from above — comparing Slovenia's coastal days"),
 };
 
 function pick(key: string): SiteImage {
