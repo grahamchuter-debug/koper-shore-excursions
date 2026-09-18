@@ -6,8 +6,7 @@
     "arrival": "08:00",
     "departure": "22:30",
     "callType": "Port of call",
-    "timeInPort": "14h 30m",
-    "notes": "port time not found in itinerary"
+    "timeInPort": "14h 30m"
   },
   {
     "date": "2026-08-02",
@@ -34,8 +33,7 @@
     "arrival": "09:00",
     "departure": "18:00",
     "callType": "Port of call",
-    "timeInPort": "9h",
-    "notes": "port time not found in itinerary"
+    "timeInPort": "9h"
   },
   {
     "date": "2026-08-11",
@@ -78,8 +76,7 @@
     "cruiseLine": "Norwegian Cruise Line",
     "arrival": "",
     "departure": "",
-    "callType": "Port of call",
-    "notes": "port time not found in itinerary"
+    "callType": "Port of call"
   },
   {
     "date": "2026-09-06",
@@ -142,8 +139,7 @@
     "arrival": "08:00",
     "departure": "22:00",
     "callType": "Port of call",
-    "timeInPort": "14h",
-    "notes": "port time not found in itinerary"
+    "timeInPort": "14h"
   },
   {
     "date": "2026-09-25",
@@ -160,8 +156,7 @@
     "arrival": "08:00",
     "departure": "22:30",
     "callType": "Port of call",
-    "timeInPort": "14h 30m",
-    "notes": "port time not found in itinerary"
+    "timeInPort": "14h 30m"
   },
   {
     "date": "2026-09-27",
@@ -179,8 +174,7 @@
     "arrival": "07:00",
     "departure": "19:00",
     "callType": "Port of call",
-    "timeInPort": "12h",
-    "notes": "port time not found in itinerary"
+    "timeInPort": "12h"
   },
   {
     "date": "2027-03-05",
@@ -239,8 +233,7 @@
     "arrival": "13:00",
     "departure": "20:00",
     "callType": "Port of call",
-    "timeInPort": "7h",
-    "notes": "port time not found in itinerary"
+    "timeInPort": "7h"
   },
   {
     "date": "2027-05-04",
@@ -283,8 +276,7 @@
     "cruiseLine": "Norwegian Cruise Line",
     "arrival": "",
     "departure": "",
-    "callType": "Port of call",
-    "notes": "port time not found in itinerary"
+    "callType": "Port of call"
   },
   {
     "date": "2027-05-09",
@@ -301,8 +293,7 @@
     "cruiseLine": "Marella Cruises",
     "arrival": "",
     "departure": "",
-    "callType": "Port of call",
-    "notes": "port time not found in itinerary"
+    "callType": "Port of call"
   },
   {
     "date": "2027-05-15",
@@ -328,8 +319,7 @@
     "cruiseLine": "Marella Cruises",
     "arrival": "",
     "departure": "",
-    "callType": "Port of call",
-    "notes": "port time not found in itinerary"
+    "callType": "Port of call"
   },
   {
     "date": "2027-05-24",
@@ -346,8 +336,7 @@
     "cruiseLine": "Norwegian Cruise Line",
     "arrival": "",
     "departure": "",
-    "callType": "Port of call",
-    "notes": "port time not found in itinerary"
+    "callType": "Port of call"
   },
   {
     "date": "2027-07-03",
@@ -355,8 +344,7 @@
     "cruiseLine": "Norwegian Cruise Line",
     "arrival": "",
     "departure": "",
-    "callType": "Port of call",
-    "notes": "port time not found in itinerary"
+    "callType": "Port of call"
   },
   {
     "date": "2027-07-06",
@@ -417,8 +405,7 @@
     "cruiseLine": "Norwegian Cruise Line",
     "arrival": "",
     "departure": "",
-    "callType": "Port of call",
-    "notes": "port time not found in itinerary"
+    "callType": "Port of call"
   },
   {
     "date": "2027-07-18",
@@ -436,8 +423,7 @@
     "arrival": "09:00",
     "departure": "19:00",
     "callType": "Port of call",
-    "timeInPort": "10h",
-    "notes": "port time not found in itinerary"
+    "timeInPort": "10h"
   },
   {
     "date": "2027-07-24",
@@ -471,8 +457,7 @@
     "cruiseLine": "Norwegian Cruise Line",
     "arrival": "06:00",
     "departure": "",
-    "callType": "Port of call",
-    "notes": "arrival only"
+    "callType": "Port of call"
   },
   {
     "date": "2027-08-01",
@@ -534,8 +519,7 @@
     "arrival": "00:30",
     "departure": "18:00",
     "callType": "Port of call",
-    "timeInPort": "17h 30m",
-    "notes": "port time not found in itinerary"
+    "timeInPort": "17h 30m"
   },
   {
     "date": "2027-08-18",
@@ -607,8 +591,7 @@
     "arrival": "08:00",
     "departure": "18:00",
     "callType": "Port of call",
-    "timeInPort": "10h",
-    "notes": "port time not found in itinerary"
+    "timeInPort": "10h"
   },
   {
     "date": "2027-09-11",

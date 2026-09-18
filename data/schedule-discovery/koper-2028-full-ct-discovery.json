@@ -1,10 +1,307 @@
 {
   "port": "koper",
   "year": 2028,
-  "wave": "wave-1d",
+  "wave": "wave-2",
   "filterDecision": "HOLD",
   "filterReason": "validated 5 < MIN_PUBLISH_ROWS 15 — HOLD; restricted rows NOT reintroduced",
-  "validatedCount": 5,
-  "tier2KeysApplied": [],
-  "total": 32
+  "total": 32,
+  "validatedCount": 0,
+  "path": "HOLD",
+  "calls": [
+    {
+      "date": "2028-05-05",
+      "ship": "Viking Star",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "timeInPort": null,
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-05-07",
+      "ship": "Explora I",
+      "cruiseLine": "Explora Journeys",
+      "arrival": "07:00",
+      "departure": "18:00",
+      "timeInPort": "11h",
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-05-26",
+      "ship": "Seabourn Ovation",
+      "cruiseLine": "Seabourn",
+      "arrival": "08:00",
+      "departure": "18:00",
+      "timeInPort": "10h",
+      "callType": "Port of call",
+      "notes": "port time not found in itinerary"
+    },
+    {
+      "date": "2028-07-01",
+      "ship": "Viking Star",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "timeInPort": null,
+      "callType": "Port of call",
+      "notes": "port time not found in itinerary"
+    },
+    {
+      "date": "2028-07-11",
+      "ship": "Seven Seas Grandeur",
+      "cruiseLine": "Regent Seven Seas Cruises",
+      "arrival": "08:00",
+      "departure": "18:00",
+      "timeInPort": "10h",
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-07-14",
+      "ship": "Silver Ray",
+      "cruiseLine": "Silversea Cruises",
+      "arrival": "08:00",
+      "departure": "19:00",
+      "timeInPort": "11h",
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-07-17",
+      "ship": "Viking Vela",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "timeInPort": null,
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-07-18",
+      "ship": "AIDAblu",
+      "cruiseLine": "AIDA",
+      "arrival": "00:30",
+      "departure": "18:00",
+      "timeInPort": "17h 30m",
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-07-21",
+      "ship": "Seabourn Ovation",
+      "cruiseLine": "Seabourn",
+      "arrival": "08:00",
+      "departure": "18:00",
+      "timeInPort": "10h",
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-07-28",
+      "ship": "Silver Dawn",
+      "cruiseLine": "Silversea Cruises",
+      "arrival": "08:30",
+      "departure": "19:00",
+      "timeInPort": "10h 30m",
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-08-02",
+      "ship": "Viking Vela",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "timeInPort": null,
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-08-07",
+      "ship": "Seven Seas Grandeur",
+      "cruiseLine": "Regent Seven Seas Cruises",
+      "arrival": "07:00",
+      "departure": "17:00",
+      "timeInPort": "10h",
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-08-11",
+      "ship": "Viking Star",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "timeInPort": null,
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-08-16",
+      "ship": "Silver Dawn",
+      "cruiseLine": "Silversea Cruises",
+      "arrival": "08:00",
+      "departure": "18:00",
+      "timeInPort": "10h",
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-08-17",
+      "ship": "Azamara Onward",
+      "cruiseLine": "Azamara Cruises",
+      "arrival": "08:00",
+      "departure": "20:00",
+      "timeInPort": "12h",
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-08-27",
+      "ship": "Viking Star",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "timeInPort": null,
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-09-01",
+      "ship": "Europa 2",
+      "cruiseLine": "Hapag Lloyd",
+      "arrival": "07:00",
+      "departure": "17:00",
+      "timeInPort": "10h",
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-09-08",
+      "ship": "Silver Ray",
+      "cruiseLine": "Silversea Cruises",
+      "arrival": "08:00",
+      "departure": "19:00",
+      "timeInPort": "11h",
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-09-11",
+      "ship": "Viking Sea",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "timeInPort": null,
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-09-13",
+      "ship": "Viking Vela",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "timeInPort": null,
+      "callType": "Port of call",
+      "notes": "port time not found in itinerary"
+    },
+    {
+      "date": "2028-09-15",
+      "ship": "Seven Seas Explorer",
+      "cruiseLine": "Regent Seven Seas Cruises",
+      "arrival": "07:00",
+      "departure": "16:00",
+      "timeInPort": "9h",
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-09-17",
+      "ship": "Oceania Allura",
+      "cruiseLine": "Oceania Cruises",
+      "arrival": "07:00",
+      "departure": "16:00",
+      "timeInPort": "9h",
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-09-18",
+      "ship": "Azamara Onward",
+      "cruiseLine": "Azamara Cruises",
+      "arrival": "08:00",
+      "departure": "22:00",
+      "timeInPort": "14h",
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-09-19",
+      "ship": "Seabourn Ovation",
+      "cruiseLine": "Seabourn",
+      "arrival": "08:00",
+      "departure": "18:00",
+      "timeInPort": "10h",
+      "callType": "Port of call",
+      "notes": "port time not found in itinerary"
+    },
+    {
+      "date": "2028-09-22",
+      "ship": "Viking Star",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "timeInPort": null,
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-09-26",
+      "ship": "Viking Astrea",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "timeInPort": null,
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-10-02",
+      "ship": "Seven Seas Grandeur",
+      "cruiseLine": "Regent Seven Seas Cruises",
+      "arrival": "07:00",
+      "departure": "18:00",
+      "timeInPort": "11h",
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-10-07",
+      "ship": "Viking Sea",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "timeInPort": null,
+      "callType": "Port of call",
+      "notes": "port time not found in itinerary"
+    },
+    {
+      "date": "2028-10-12",
+      "ship": "Azamara Journey",
+      "cruiseLine": "Azamara Cruises",
+      "arrival": "08:00",
+      "departure": "22:00",
+      "timeInPort": "14h",
+      "callType": "Port of call",
+      "notes": "port time not found in itinerary"
+    },
+    {
+      "date": "2028-10-16",
+      "ship": "Silver Dawn",
+      "cruiseLine": "Silversea Cruises",
+      "arrival": "08:00",
+      "departure": "19:00",
+      "timeInPort": "11h",
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-10-18",
+      "ship": "Azamara Quest",
+      "cruiseLine": "Azamara Cruises",
+      "arrival": "08:00",
+      "departure": "20:00",
+      "timeInPort": "12h",
+      "callType": "Port of call"
+    },
+    {
+      "date": "2028-11-03",
+      "ship": "Seabourn Ovation",
+      "cruiseLine": "Seabourn",
+      "arrival": "08:00",
+      "departure": "18:00",
+      "timeInPort": "10h",
+      "callType": "Port of call",
+      "notes": "port time not found in itinerary"
+    }
+  ]
 }
